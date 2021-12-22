@@ -1,0 +1,58 @@
+Verifying VendorOracle
+Already Verified: https://kovan.etherscan.io/address/0x71d45ab4943E8Cd6F4b5D35439470297895F79D0#code
+Successfully verified 1 contract(s).
+Verifying Vendor
+Pass - Verified: https://rinkeby.etherscan.io/address/0x02A536963F4F111ed00D5D57Cd09de933fcbDE33#code
+Successfully verified 1 contract(s).
+
+  Vendor
+    setApprovedToken
+      √ Should setApprovedToken successfully (161ms)
+      √ Should not add token. Token address is 0 (223ms)
+      √ Should not add token. Agregator address is 0 (77ms)
+      √ Should not add token. Sender isn't owner (72ms)
+      √ Should not add token. Token already exists (85ms)
+    removeApprovedToken
+      √ Should removeApprovedToken successfully (77ms)
+      √ Should not remove token. Sender isn't owner (93ms)
+      √ Should not remove token. Token isn't exists (64ms)
+      √ Should not remove token. Wrong input value (52ms)
+    getCountApprovedTokens
+      √ Should getCountApprovedTokens successfully (55ms)
+    getInfoApprovedToken
+      √ Should getInfoApprovedToken successfully (75ms)
+      √ Should be fail. Wrong token's index (67ms)
+    buyToken
+      √ Should successfully. Buying sst token for ether (101ms)
+      √ Should successfully. Buying sst token for dai (148ms)
+      √ Should successfully. Buying sst token for ether and dai (150ms)
+      √ Should successfully. Amount of tokens entered, no token address, ether entered (124ms)
+      √ Should successfully. Token address entered, no amount of tokens, ether entered (141ms)
+You can't buy token! You have not ERC721 token!
+      √ Should be fail. You can't buy token! You have not ERC721 token! Buying sst token for ether and dai (113ms)
+Your total amount of token is zerro!
+      √ Should be fail. Your total amount of token is zerro! Amounts and address are not entered (117ms)
+Your total amount of token is zerro!
+      √ Should be fail. Your total amount of token is zerro!! Amount of tokens entered, no token address, no ether (113ms)
+Your total amount of token is zerro!
+      √ Should be fail. Your total amount of token is zerro!! Token address entered, no amount of tokens, no ether (114ms)
+You have not enough token in your balance!
+      √ Should be fail. You do not have enough ether in your balance (124ms)
+This token wasn't approved!
+      √ Should be fail. This token wasn't approved (102ms)
+You have not approved enough tokens!
+      √ Should be fail. You have not approved enough tokens (127ms)
+Sorry, there is not enough tokens to buy!
+      √ Should be fail. Sorry, there is not enough tokens to buy. No amount, no token address, ether entered (122ms)
+Sorry, there is not enough tokens to buy!
+      √ Should be fail. Sorry, there is not enough tokens to buy. Amount and token address entered, no ether (122ms)
+Your total amount of token is zerro!
+      √ Should be fail. Your total amount of token is zerro! Amount and token address entered, no ether (135ms)
+    claimAll
+      √ Should successfully. Claim ether (112ms)
+      √ Should successfully. Claim dai (202ms)
+      √ Should successfully. Claim dai and ether (145ms)
+      √ Should be fail. Ownable: caller is not the owner (69ms)
+
+
+  31 passing (10s)
